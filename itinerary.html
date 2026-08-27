@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Jaipur Itinerary 5 Days — Day-by-Day Jaipur Travel Plan (Forts, Palaces & Bazaars)</title>
+    <meta name="description" content="Best 5-day Jaipur itinerary: detailed hour-by-hour plan for Amer Fort, Hawa Mahal, City Palace, Nahargarh sunset, Jantar Mantar & bazaars."/>
+    <meta name="keywords" content="jaipur itinerary, jaipur itnary, 5 days in jaipur, jaipur travel plan 5 days, jaipur trip itinerary, jaipur sightseeing plan, jaipur fort tour, how to spend 5 days in jaipur"/>
+    <meta name="robots" content="index, follow, max-image-preview:large"/>
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="5-Day Jaipur Itinerary — Complete Travel Plan & Route"/>
+    <meta property="og:description" content="Explore Jaipur in 5 days: Day 1 Royal City, Day 2 Amer Forts, Day 3 Nahargarh & Museums, Day 4 Bazaars & Food, Day 5 Stepwells."/>
+    <meta property="og:image" content="images/amer-fort.jpg"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many days are enough for a Jaipur trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 4 to 5 day itinerary is ideal for Jaipur. It allows you to explore the top forts (Amer, Jaigarh, Nahargarh), palaces (City Palace, Hawa Mahal, Jal Mahal), museums, and traditional bazaars without rushing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best time to visit Jaipur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best time to visit Jaipur is from October to March when the weather is pleasant and comfortable for exploring forts and open-air heritage sites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the must-visit places in a Jaipur itinerary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Must-visit places include Amer Fort, Hawa Mahal, City Palace, Jantar Mantar, Nahargarh Fort, Jal Mahal, Panna Meena ka Kund stepwell, Patrika Gate, and Johari Bazaar."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <style>
+        /* Itinerary-specific styles */
+        .bento-grid {
+            display: grid; grid-template-columns: 1fr; gap: 24px; grid-auto-rows: 250px;
+        }
+        @media (min-width: 768px) { .bento-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .bento-card {
+            border: 2px solid var(--indigo-night); padding: 24px;
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            transition: transform 0.2s ease;
+        }
+        .bento-card:hover { transform: translateY(-4px); }
+        .bento-card.span-2 { grid-column: span 1; }
+        @media (min-width: 768px) { .bento-card.span-2 { grid-column: span 2; } }
+
+        .bento-day-badge {
+            background: rgba(253,247,240,0.9); padding: 8px 16px;
+            border: 2px solid var(--indigo-night); display: inline-block;
+            align-self: flex-start; margin-bottom: auto;
+        }
+        .bento-day-badge.dark {
+            background: rgba(253,247,240,0.1); border-color: rgba(253,247,240,0.2);
+        }
+        .bento-day-text {
+            font-family: var(--font-label); font-size: 14px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.15em;
+        }
+        .bento-icon {
+            position: absolute; top: 24px; right: 24px;
+            font-size: 48px; opacity: 0.5; transition: transform 0.3s ease;
+        }
+        .bento-card:hover .bento-icon { transform: scale(1.1); }
+
+        .arch-1 {
+            position: absolute; right: 0; bottom: 0; width: 128px; height: 192px;
+            border-left: 4px solid var(--marigold); border-top: 4px solid var(--marigold);
+            border-radius: 100% 0 0 0; opacity: 0.5;
+        }
+        .arch-2 {
+            position: absolute; right: 32px; bottom: 0; width: 96px; height: 160px;
+            border-left: 4px solid var(--rani-pink); border-top: 4px solid var(--rani-pink);
+            border-radius: 100% 0 0 0; opacity: 0.5;
+        }
+
+        /* Day cards */
+        .itinerary-grid {
+            display: grid; grid-template-columns: 1fr; gap: var(--gutter);
+        }
+        @media (min-width: 1024px) { .itinerary-grid { grid-template-columns: 8fr 4fr; } }
+
+        .day-card {
+            background: var(--sand-white); border: 2px solid var(--indigo-night);
+            border-radius: var(--rounded-xl); padding: 24px;
+            position: relative; overflow: hidden;
+        }
+        @media (min-width: 768px) { .day-card { padding: 32px; } }
+        .day-card.dark { background: var(--indigo-night); color: var(--sand-white); }
+
+        .day-number-bg {
+            position: absolute; top: 0; right: 0; padding: 16px; opacity: 0.1;
+            font-family: var(--font-headline); font-size: 120px; font-weight: 900;
+            line-height: 1; transform: translate(16px, -16px);
+            transition: transform 0.5s ease;
+        }
+        .day-card:hover .day-number-bg { transform: translate(16px, -16px) scale(1.1); }
+
+        .day-badge {
+            display: inline-block; font-family: var(--font-label); font-size: 14px;
+            font-weight: 700; padding: 4px 12px; border-radius: var(--rounded-full);
+            border: 1px solid var(--indigo-night);
+        }
+        .day-badge.pink { background: var(--rani-pink); color: #fff; }
+        .day-badge.yellow { background: var(--marigold); color: var(--indigo-night); }
+        .day-badge.turquoise { background: var(--turquoise); color: #fff; }
+        .day-badge.dark-badge { background: rgba(253,247,240,0.1); color: var(--marigold); border-color: rgba(253,247,240,0.3); }
+
+        /* Timeline */
+        .timeline { display: flex; flex-direction: column; gap: 24px; }
+        .timeline-item { display: flex; gap: 16px; align-items: flex-start; }
+        .timeline-time {
+            width: 80px; flex-shrink: 0; padding-top: 4px;
+            font-family: var(--font-label); font-size: 12px; font-weight: 700;
+            text-transform: uppercase; color: var(--turquoise);
+        }
+        .timeline-time.yellow { color: var(--marigold); }
+        .timeline-content {
+            border-left: 2px dashed var(--outline-variant);
+            padding-left: 16px; padding-bottom: 16px; width: 100%;
+        }
+        .timeline-content.solid { border-left-style: solid; border-color: var(--marigold); }
+        .timeline-content.solid-dark { border-left: 2px solid var(--marigold); }
+        .timeline-content h3 {
+            font-family: var(--font-headline); font-size: 18px; font-weight: 600; margin-bottom: 4px;
+        }
+        .timeline-content p { font-size: 14px; color: var(--on-surface-variant); }
+        .timeline-content.dark-text p { color: rgba(253,247,240,0.7); }
+        .timeline-content.dark-text h3 { color: var(--sand-white); }
+
+        .tag-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .tag {
+            background: var(--surface-container-highest); color: var(--indigo-night);
+            font-size: 12px; padding: 4px 8px; border-radius: var(--rounded-sm);
+            border: 1px solid var(--indigo-night);
+        }
+
+        .pro-tip {
+            margin-top: 24px; background: rgba(255,184,0,0.2);
+            border: 1px solid var(--marigold); padding: 16px; border-radius: var(--rounded-lg);
+            display: flex; gap: 12px; align-items: flex-start;
+        }
+        .pro-tip .material-symbols-outlined { color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+        .pro-tip p { font-size: 14px; font-weight: 500; color: var(--primary); }
+
+        .info-banner {
+            grid-column: 1 / -1; background: var(--marigold);
+            border: 2px solid var(--indigo-night); border-radius: var(--rounded-xl);
+            padding: 24px; display: flex; flex-direction: column;
+            justify-content: space-between; align-items: center; gap: 16px;
+        }
+        @media (min-width: 768px) { .info-banner { flex-direction: row; } }
+        .info-banner-content { display: flex; align-items: center; gap: 16px; }
+        .info-banner-icon {
+            background: var(--indigo-night); padding: 12px; border-radius: 50%;
+            color: var(--marigold); display: flex;
+        }
+
+        .section-image {
+            border-radius: 32px 32px var(--rounded-xl) var(--rounded-xl);
+            overflow: hidden; border: 2px solid var(--indigo-night);
+            margin-bottom: 32px; height: 350px;
+        }
+        .section-image img { width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 767px) { .section-image { height: 220px; border-radius: var(--rounded-xl); } }
+
+        /* Glance cards */
+        .glance-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 768px) { .glance-grid { grid-template-columns: repeat(5, 1fr); } }
+
+        .glance-card {
+            border: 2px solid var(--indigo-night); padding: 24px; text-align: center;
+            transition: all 0.2s ease; position: relative; overflow: hidden;
+        }
+        .glance-card:hover { transform: translateY(-4px); }
+        .glance-card .day-num {
+            font-family: var(--font-headline); font-size: 48px; font-weight: 800;
+            opacity: 0.15; position: absolute; top: 8px; right: 12px;
+        }
+        .glance-card .day-label {
+            font-family: var(--font-label); font-size: 12px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 12px;
+        }
+        .glance-card p { font-size: 13px; line-height: 20px; }
+
+        /* Where to stay */
+        .stay-card {
+            display: flex; gap: 16px; align-items: flex-start; padding: 20px;
+            background: rgba(253,247,240,0.05); border: 1px solid rgba(253,247,240,0.1);
+            border-radius: var(--rounded-lg); transition: background 0.2s;
+        }
+        .stay-card:hover { background: rgba(253,247,240,0.1); }
+
+        /* Nav page links on inner pages */
+        .inner-nav-links { display: none; gap: 24px; align-items: center; }
+        @media (min-width: 768px) { .inner-nav-links { display: flex; } }
+    </style>
+</head>
+<body class="page-fade-in">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">JAIPUR JIVE</a>
+    <div class="inner-nav-links">
+        <a class="nav-link active" href="itinerary.html">Itinerary</a>
+        <a class="nav-link" href="food.html">Food Guide</a>
+        <a class="nav-link" href="shopping.html">Shopping</a>
+        <a class="nav-link" href="budget.html">Budget & Tips</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+        <a class="btn-primary hard-shadow btn-click nav-cta" href="index.html">
+            <span class="material-symbols-outlined" style="font-size:18px;margin-right:6px;">home</span> Home
+        </a>
+        <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('active')">
+            <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">
+        <span class="material-symbols-outlined" style="font-size:36px;">close</span>
+    </button>
+    <a class="mobile-nav-link" href="index.html">Home</a>
+    <a class="mobile-nav-link" href="itinerary.html">Itinerary</a>
+    <a class="mobile-nav-link" href="food.html">Food Guide</a>
+    <a class="mobile-nav-link" href="shopping.html">Shopping</a>
+    <a class="mobile-nav-link" href="budget.html">Budget & Tips</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <div class="bg-pattern"></div>
+    <div class="page-header-content">
+        <a class="page-back" href="index.html">
+            <span class="material-symbols-outlined">arrow_back</span> Back to Home
+        </a>
+        <h1 class="display-lg" style="color:var(--marigold);">5-Day Itinerary</h1>
+        <p class="body-lg" style="color:rgba(253,247,240,0.8);margin-top:12px;max-width:600px;">
+            A perfectly balanced journey blending majestic forts, vibrant bazaars, and unforgettable Rajasthani cuisine.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;">
+            <span class="meta-chip" style="background:transparent;border-color:rgba(253,247,240,0.3);color:var(--sand-white);">
+                <span class="material-symbols-outlined" style="color:var(--marigold);font-size:18px;">calendar_month</span> 5 Days / 4 Nights
+            </span>
+            <span class="meta-chip" style="background:transparent;border-color:rgba(253,247,240,0.3);color:var(--sand-white);">
+                <span class="material-symbols-outlined" style="color:var(--rani-pink);font-size:18px;">hiking</span> Comfortable Pace
+            </span>
+            <span class="meta-chip" style="background:transparent;border-color:rgba(253,247,240,0.3);color:var(--sand-white);">
+                <span class="material-symbols-outlined" style="color:var(--turquoise);font-size:18px;">sunny</span> Best: Oct - Mar
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- BENTO GRID OVERVIEW -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">Trip Highlights</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">At a glance overview of your 5 days.</p>
+            </div>
+            <div class="section-meta">
+                <span class="meta-chip"><span class="material-symbols-outlined" style="color:var(--marigold);">sunny</span> Jul-Sep</span>
+                <span class="meta-chip"><span class="material-symbols-outlined" style="color:var(--rani-pink);">thermostat</span> 21-35°C</span>
+            </div>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-card span-2 hard-shadow" style="background:var(--marigold);">
+                <div class="bento-day-badge"><span class="bento-day-text" style="color:var(--rani-pink);">Day 1 & 2</span></div>
+                <div style="position:relative;z-index:10;"><h3 class="headline-md" style="color:var(--indigo-night);margin-bottom:8px;">The Royal Core</h3><p class="body-md" style="color:var(--indigo-night);">Hawa Mahal, City Palace, Amer Fort & Jantar Mantar. The essential architectural masterpieces.</p></div>
+            </div>
+            <div class="bento-card hard-shadow" style="background:var(--turquoise);">
+                <div class="bento-day-badge"><span class="bento-day-text" style="color:var(--indigo-night);">Day 3</span></div>
+                <span class="material-symbols-outlined bento-icon" style="color:#fff;">museum</span>
+                <div><h3 class="headline-md" style="color:#fff;margin-bottom:8px;">Vistas & Museums</h3><p class="body-md" style="color:rgba(255,255,255,0.9);">Nahargarh Fort, Gaitore, and the Albert Hall.</p></div>
+            </div>
+            <div class="bento-card hard-shadow" style="background:var(--rani-pink);">
+                <div class="bento-day-badge"><span class="bento-day-text" style="color:var(--indigo-night);">Day 4</span></div>
+                <span class="material-symbols-outlined bento-icon" style="color:#fff;">shopping_bag</span>
+                <div><h3 class="headline-md" style="color:#fff;margin-bottom:8px;">Culture & Bazaars</h3><p class="body-md" style="color:rgba(255,255,255,0.9);">Patrika Gate, local handicrafts, and Rajasthani cuisine.</p></div>
+            </div>
+            <div class="bento-card span-2 hard-shadow" style="background:var(--indigo-night);">
+                <div class="bento-day-badge dark"><span class="bento-day-text" style="color:var(--marigold);">Day 5</span></div>
+                <div class="arch-1"></div><div class="arch-2"></div>
+                <div style="position:relative;z-index:10;"><h3 class="headline-md" style="color:var(--sand-white);margin-bottom:8px;">Flexible Finale</h3><p class="body-md" style="color:rgba(253,247,240,0.8);">Relax, explore Abhaneri Stepwell, or day trip to Pushkar.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- DETAILED ITINERARY -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div><h2 class="headline-lg">Day-by-Day Details</h2><p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">Your complete daily guide.</p></div>
+        </div>
+
+        <div class="itinerary-grid">
+            <!-- DAY 1 -->
+            <div class="day-card hard-shadow" style="position:relative;">
+                <div class="day-number-bg" style="color:var(--indigo-night);">01</div>
+                <div style="position:relative;z-index:10;">
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                        <span class="day-badge pink">Day 1</span>
+                        <h2 class="headline-lg" style="color:var(--indigo-night);">Pink City & Royal Jaipur</h2>
+                    </div>
+                    <p class="body-md" style="color:var(--on-surface-variant);margin-bottom:24px;">Hawa Mahal, City Palace, Jantar Mantar, Johari Bazaar</p>
+                    <div class="timeline">
+                        <div class="timeline-item"><div class="timeline-time">9:00 AM</div><div class="timeline-content"><h3>Hawa Mahal</h3><p>Photograph the iconic façade and explore the surrounding old-city streets. Allow 30–60 minutes.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">10:15 AM</div><div class="timeline-content"><h3>City Palace & Jantar Mantar</h3><p>Explore royal residences, courtyards, decorative gates, and the 19 astronomical instruments (UNESCO Site). Allow 2.5–3 hours.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">1:45 PM</div><div class="timeline-content"><h3>Lunch — Old City / MI Road</h3><p>Try dal baati churma, Rajasthani thali, gatte ki sabzi, ker sangri, chaas.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">3:00 PM</div><div class="timeline-content solid"><h3>Old City Walk</h3><div class="tag-group"><span class="tag">Johari Bazaar</span><span class="tag">Bapu Bazaar</span><span class="tag">Tripolia Bazaar</span></div></div></div>
+                        <div class="timeline-item"><div class="timeline-time">7:00 PM</div><div class="timeline-content"><h3>Rajasthani Dinner</h3><p>Traditional thali rather than generic North Indian. Optional night drive through illuminated Pink City.</p></div></div>
+                    </div>
+                    <div class="pro-tip"><span class="material-symbols-outlined">tips_and_updates</span><p><strong>Pro-Tip:</strong> Keep this day mostly walkable and avoid unnecessary long-distance travel. Don't rush the markets!</p></div>
+                </div>
+            </div>
+
+            <!-- DAY 2 -->
+            <div class="day-card dark hard-shadow-yellow" style="position:relative;">
+                <div class="day-number-bg" style="color:var(--sand-white);">02</div>
+                <div style="position:relative;z-index:10;">
+                    <span class="day-badge yellow">Day 2</span>
+                    <h2 class="headline-lg" style="color:var(--marigold);margin-top:12px;margin-bottom:8px;">Amer & The Forts</h2>
+                    <p class="body-md" style="color:rgba(253,247,240,0.8);margin-bottom:24px;">Amer Fort, Panna Meena ka Kund, Jaigarh, Jal Mahal</p>
+                    <div class="timeline">
+                        <div class="timeline-item"><div class="timeline-time yellow">8:15 AM</div><div class="timeline-content solid-dark dark-text"><h3>Head to Amer</h3><p>~11 km from central Jaipur. Start early to beat heat and crowds.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time yellow">9:00 AM</div><div class="timeline-content solid-dark dark-text"><h3>Amer Fort Complex</h3><p>Jaleb Chowk, Diwan-i-Aam, Sheesh Mahal, Ganesh Pol, gardens. Allow 2.5–3 hours.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time yellow">12:00 PM</div><div class="timeline-content solid-dark dark-text"><h3>Panna Meena ka Kund</h3><p>Historic stepwell near Amer. 30–45 minutes.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time yellow">2:30 PM</div><div class="timeline-content solid-dark dark-text"><h3>Jaigarh Fort</h3><p>Fort walls, massive cannon, hilltop views, water-storage system. 1.5–2 hours.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time yellow">4:45 PM</div><div class="timeline-content solid-dark dark-text"><h3>Jal Mahal</h3><p>Lakeside photo stop on the way back. 30–45 minutes.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time yellow">7:30 PM</div><div class="timeline-content solid-dark dark-text"><h3>Rooftop Dinner</h3><p>Try a rooftop restaurant or traditional Rajasthani restaurant.</p></div></div>
+                    </div>
+                    <div class="pro-tip" style="background:rgba(255,184,0,0.1);border-color:rgba(255,184,0,0.3);"><span class="material-symbols-outlined" style="color:var(--marigold);">tips_and_updates</span><p style="color:var(--marigold);"><strong>Pro-Tip:</strong> Amer + Jaigarh are priorities. Don't add five more monuments just because they appear close on a map.</p></div>
+                </div>
+            </div>
+
+            <!-- FOOD BANNER -->
+            <div class="info-banner hard-shadow">
+                <div class="info-banner-content">
+                    <div class="info-banner-icon"><span class="material-symbols-outlined">restaurant</span></div>
+                    <div>
+                        <h4 class="headline-md" style="color:var(--indigo-night);font-size:18px;">Must-Try Food Strategy</h4>
+                        <p style="color:var(--primary);font-weight:500;font-size:14px;">Breakfast: Local | Lunch: Thali | Evening: Street Food | Dinner: Rooftop</p>
+                    </div>
+                </div>
+                <a class="btn-secondary btn-click" href="food.html" style="width:100%;text-align:center;">View Food Guide →</a>
+            </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <div style="margin-top:32px;">
+            <div class="section-image"><img src="images/nahargarh-fort.jpg" alt="Nahargarh Fort overlooking Jaipur at sunset"/></div>
+            <div class="day-card hard-shadow" style="position:relative;background:var(--surface-container-low);">
+                <div class="day-number-bg" style="color:var(--indigo-night);">03</div>
+                <div style="position:relative;z-index:10;">
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                        <span class="day-badge turquoise">Day 3</span>
+                        <h2 class="headline-lg" style="color:var(--indigo-night);">Nahargarh, Gaitore & Museums</h2>
+                    </div>
+                    <p class="body-md" style="color:var(--on-surface-variant);margin-bottom:24px;">Mix of outdoor sightseeing and indoor attractions to avoid burnout.</p>
+                    <div class="timeline">
+                        <div class="timeline-item"><div class="timeline-time">9:00 AM</div><div class="timeline-content"><h3>Nahargarh Fort</h3><p>Jaipur city views, fort architecture, photography, Madhavendra Bhawan. ~2 hours.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">11:30 AM</div><div class="timeline-content"><h3>Gaitore Ki Chhatriyan</h3><p>Royal cenotaphs. Quieter than major forts. 45–60 minutes.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">2:30 PM</div><div class="timeline-content"><h3>Albert Hall Museum</h3><p>Works well on hot/rainy days. 1.5–2 hours.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">6:30 PM</div><div class="timeline-content solid"><h3>Birla Mandir</h3><p>Visit around sunset/evening. ~45 minutes.</p></div></div>
+                    </div>
+                    <div class="pro-tip"><span class="material-symbols-outlined">tips_and_updates</span><p><strong>Pro-Tip:</strong> This day deliberately mixes outdoor and indoor attractions so you do not burn out.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 4 -->
+        <div style="margin-top:32px;">
+            <div class="section-image"><img src="images/jaipur-bazaar.jpg" alt="Colorful Jaipur bazaar with textiles and handicrafts"/></div>
+            <div class="day-card hard-shadow-pink" style="position:relative;border-color:var(--rani-pink);">
+                <div class="day-number-bg" style="color:var(--rani-pink);">04</div>
+                <div style="position:relative;z-index:10;">
+                    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                        <span class="day-badge pink">Day 4</span>
+                        <h2 class="headline-lg" style="color:var(--indigo-night);">Culture, Food & Shopping</h2>
+                    </div>
+                    <p class="body-md" style="color:var(--on-surface-variant);margin-bottom:24px;">Intentionally less aggressive — food + shopping + culture.</p>
+                    <div class="timeline">
+                        <div class="timeline-item"><div class="timeline-time">9:30 AM</div><div class="timeline-content"><h3>Patrika Gate</h3><p>Photography. 30–45 minutes.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">10:30 AM</div><div class="timeline-content"><h3>Local Market & Handicrafts</h3><div class="tag-group"><span class="tag">Block-print textiles</span><span class="tag">Blue pottery</span><span class="tag">Mojari</span><span class="tag">Jewellery</span><span class="tag">Spices</span></div></div></div>
+                        <div class="timeline-item"><div class="timeline-time">1:00 PM</div><div class="timeline-content solid"><h3>Rajasthani Lunch</h3><p>Make this the main food experience. Dal baati churma, gatte, ker sangri, bajra roti.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">2:30 PM</div><div class="timeline-content"><h3>Hotel Rest</h3><p>Take a proper break. Important for a 5-day trip.</p></div></div>
+                        <div class="timeline-item"><div class="timeline-time">5:00 PM</div><div class="timeline-content"><h3>Pink City Evening</h3><p>Explore old city markets at a slower pace. Final shopping and relaxed dinner.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAY 5 -->
+        <div style="margin-top:32px;">
+            <div class="section-image"><img src="images/jal-mahal.jpg" alt="Jal Mahal water palace at sunset"/></div>
+            <div class="day-card dark hard-shadow" style="position:relative;">
+                <div class="day-number-bg" style="color:var(--sand-white);">05</div>
+                <div class="arch-1"></div><div class="arch-2"></div>
+                <div style="position:relative;z-index:10;">
+                    <span class="day-badge dark-badge">Day 5</span>
+                    <h2 class="headline-lg" style="color:var(--marigold);margin-top:12px;margin-bottom:16px;">Flexible Final Day</h2>
+                    <div style="display:grid;grid-template-columns:1fr;gap:24px;">
+                        <div style="background:rgba(253,247,240,0.05);border:1px solid rgba(253,247,240,0.15);border-radius:var(--rounded-lg);padding:20px;">
+                            <h3 class="headline-md" style="color:var(--marigold);font-size:18px;margin-bottom:8px;">Option A — Relaxed Jaipur Day</h3>
+                            <p style="color:rgba(253,247,240,0.7);font-size:14px;">Revisit a market, buy souvenirs, café, lunch, visit one remaining attraction. Depart evening.</p>
+                        </div>
+                        <div style="background:rgba(253,247,240,0.05);border:1px solid rgba(253,247,240,0.15);border-radius:var(--rounded-lg);padding:20px;">
+                            <h3 class="headline-md" style="color:var(--turquoise);font-size:18px;margin-bottom:8px;">Option B — Abhaneri Stepwell</h3>
+                            <p style="color:rgba(253,247,240,0.7);font-size:14px;">Leave 7 AM → Abhaneri 9 AM → explore → return 2 PM → shopping/rest → depart evening.</p>
+                        </div>
+                        <div style="background:rgba(253,247,240,0.05);border:1px solid rgba(253,247,240,0.15);border-radius:var(--rounded-lg);padding:20px;">
+                            <h3 class="headline-md" style="color:var(--rani-pink);font-size:18px;margin-bottom:8px;">Option C — Pushkar Day Trip</h3>
+                            <p style="color:rgba(253,247,240,0.7);font-size:14px;">~145 km from Jaipur. Travel-heavy — choose only if you specifically want Pushkar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- AT A GLANCE -->
+<section class="section">
+    <div class="container">
+        <div class="section-header"><div><h2 class="headline-lg">5-Day Plan at a Glance</h2></div></div>
+        <div class="glance-grid">
+            <div class="glance-card hard-shadow" style="background:var(--marigold);"><span class="day-num">1</span><div class="day-label" style="color:var(--rani-pink);">Day 1</div><p style="color:var(--indigo-night);">Hawa Mahal → City Palace → Jantar Mantar → Markets → Dinner</p></div>
+            <div class="glance-card hard-shadow" style="background:var(--indigo-night);"><span class="day-num" style="color:var(--sand-white);">2</span><div class="day-label" style="color:var(--marigold);">Day 2</div><p style="color:rgba(253,247,240,0.85);">Amer Fort → Panna Meena → Jaigarh → Jal Mahal → Dinner</p></div>
+            <div class="glance-card hard-shadow" style="background:var(--turquoise);"><span class="day-num" style="color:#fff;">3</span><div class="day-label" style="color:var(--indigo-night);">Day 3</div><p style="color:#fff;">Nahargarh → Gaitore → Albert Hall → Birla Mandir → Dinner</p></div>
+            <div class="glance-card hard-shadow" style="background:var(--rani-pink);"><span class="day-num" style="color:#fff;">4</span><div class="day-label" style="color:var(--sand-white);">Day 4</div><p style="color:rgba(255,255,255,0.9);">Patrika Gate → Shopping → Lunch → Rest → Pink City Evening</p></div>
+            <div class="glance-card hard-shadow" style="background:var(--sand-white);"><span class="day-num" style="color:var(--indigo-night);">5</span><div class="day-label" style="color:var(--rani-pink);">Day 5</div><p style="color:var(--indigo-night);">Flexible: Jaipur / Abhaneri / Pushkar → Departure</p></div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- WHERE TO STAY -->
+<section style="background:var(--indigo-night);padding:var(--section-gap) 0;">
+    <div class="container">
+        <h2 class="headline-lg" style="color:var(--marigold);margin-bottom:32px;">Where to Stay</h2>
+        <div style="display:grid;grid-template-columns:1fr;gap:16px;">
+            <div class="stay-card"><span class="material-symbols-outlined" style="color:var(--marigold);font-size:28px;flex-shrink:0;">apartment</span><div><h3 class="headline-md" style="font-size:18px;color:var(--sand-white);margin-bottom:4px;">Bani Park <span class="label-sm" style="color:var(--turquoise);margin-left:8px;">RECOMMENDED</span></h3><p style="color:rgba(253,247,240,0.7);font-size:14px;">Good overall base, convenient for transport and restaurants.</p></div></div>
+            <div class="stay-card"><span class="material-symbols-outlined" style="color:var(--rani-pink);font-size:28px;flex-shrink:0;">location_city</span><div><h3 class="headline-md" style="font-size:18px;color:var(--sand-white);margin-bottom:4px;">MI Road</h3><p style="color:rgba(253,247,240,0.7);font-size:14px;">Central and convenient for first-time visitors.</p></div></div>
+            <div class="stay-card"><span class="material-symbols-outlined" style="color:var(--turquoise);font-size:28px;flex-shrink:0;">coffee</span><div><h3 class="headline-md" style="font-size:18px;color:var(--sand-white);margin-bottom:4px;">C-Scheme <span class="label-sm" style="color:var(--turquoise);margin-left:8px;">RECOMMENDED</span></h3><p style="color:rgba(253,247,240,0.7);font-size:14px;">Better for restaurants, cafés and a modern atmosphere.</p></div></div>
+            <div class="stay-card"><span class="material-symbols-outlined" style="color:var(--marigold);font-size:28px;flex-shrink:0;">temple_hindu</span><div><h3 class="headline-md" style="font-size:18px;color:var(--sand-white);margin-bottom:4px;">Pink City</h3><p style="color:rgba(253,247,240,0.7);font-size:14px;">Best if you want to stay close to old city markets and monuments.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- NEXT PAGE CTA -->
+<section style="padding:48px 0;background:var(--sand-white);text-align:center;">
+    <div class="container" style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+        <a class="btn-primary hard-shadow btn-click btn-lg" href="food.html">Food Guide →</a>
+        <a class="btn-pink hard-shadow btn-click btn-lg" href="shopping.html">Shopping Guide →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div><div class="footer-brand">JAIPUR JIVE</div><p class="footer-copy">© 2024 Jaipur Jive. Explore the Pink City with Soul.</p></div>
+    <div class="footer-links">
+        <a class="footer-link highlight" href="index.html">Home</a>
+        <a class="footer-link" href="itinerary.html">Itinerary</a>
+        <a class="footer-link" href="food.html">Food Guide</a>
+        <a class="footer-link" href="shopping.html">Shopping</a>
+        <a class="footer-link" href="budget.html">Budget & Tips</a>
+    </div>
+</footer>
+
+</body>
+</html>

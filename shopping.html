@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Shopping Guide — Jaipur Jive</title>
+    <meta name="description" content="What to buy and how to shop smart in Jaipur. Block-print textiles, blue pottery, mojari, jewellery, spices and handicrafts."/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <style>
+        .shopping-items {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+        }
+        @media (min-width: 768px) { .shopping-items { grid-template-columns: repeat(4, 1fr); } }
+
+        .shopping-item {
+            background: var(--surface-container); border: 2px solid var(--indigo-night);
+            padding: 24px; text-align: center; transition: all 0.2s ease;
+        }
+        .shopping-item:hover { transform: translateY(-4px); background: var(--marigold); }
+        .shopping-item .material-symbols-outlined { font-size: 36px; color: var(--rani-pink); margin-bottom: 12px; }
+        .shopping-item:hover .material-symbols-outlined { color: var(--indigo-night); }
+
+        .shopping-warning {
+            background: var(--error-container); border: 2px solid var(--error);
+            border-radius: var(--rounded-lg); padding: 24px; margin-top: 32px;
+        }
+        .shopping-warning-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .shopping-warning-header .material-symbols-outlined { color: var(--error); }
+        .shopping-warning ol { padding-left: 24px; list-style: decimal; }
+        .shopping-warning ol li { margin-bottom: 6px; font-size: 14px; }
+
+        .section-image {
+            border-radius: 32px 32px var(--rounded-xl) var(--rounded-xl);
+            overflow: hidden; border: 2px solid var(--indigo-night);
+            margin-bottom: 32px; height: 350px;
+        }
+        .section-image img { width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 767px) { .section-image { height: 220px; border-radius: var(--rounded-xl); } }
+
+        /* Transport cards */
+        .transport-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 768px) { .transport-grid { grid-template-columns: repeat(3, 1fr); } }
+        .transport-card {
+            border: 2px solid var(--indigo-night); padding: 24px;
+            border-radius: var(--rounded-xl); transition: all 0.2s ease;
+        }
+        .transport-card:hover { transform: translateY(-4px); }
+        .transport-card .material-symbols-outlined { font-size: 40px; margin-bottom: 16px; }
+
+        .inner-nav-links { display: none; gap: 24px; align-items: center; }
+        @media (min-width: 768px) { .inner-nav-links { display: flex; } }
+    </style>
+</head>
+<body class="page-fade-in">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">JAIPUR JIVE</a>
+    <div class="inner-nav-links">
+        <a class="nav-link" href="itinerary.html">Itinerary</a>
+        <a class="nav-link" href="food.html">Food Guide</a>
+        <a class="nav-link active" href="shopping.html">Shopping</a>
+        <a class="nav-link" href="budget.html">Budget & Tips</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+        <a class="btn-primary hard-shadow btn-click nav-cta" href="index.html">
+            <span class="material-symbols-outlined" style="font-size:18px;margin-right:6px;">home</span> Home
+        </a>
+        <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('active')">
+            <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">
+        <span class="material-symbols-outlined" style="font-size:36px;">close</span>
+    </button>
+    <a class="mobile-nav-link" href="index.html">Home</a>
+    <a class="mobile-nav-link" href="itinerary.html">Itinerary</a>
+    <a class="mobile-nav-link" href="food.html">Food Guide</a>
+    <a class="mobile-nav-link" href="shopping.html">Shopping</a>
+    <a class="mobile-nav-link" href="budget.html">Budget & Tips</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <div class="bg-pattern"></div>
+    <div class="page-header-content">
+        <a class="page-back" href="index.html">
+            <span class="material-symbols-outlined">arrow_back</span> Back to Home
+        </a>
+        <h1 class="display-lg" style="color:var(--marigold);">Shopping & Transport</h1>
+        <p class="body-lg" style="color:rgba(253,247,240,0.8);margin-top:12px;max-width:600px;">
+            What to buy, how to shop smart, and how to get around the Pink City.
+        </p>
+    </div>
+</div>
+
+<!-- SHOPPING SECTION -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">Shopping Guide</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">What to buy and how to shop smart in Jaipur.</p>
+            </div>
+        </div>
+
+        <div class="section-image">
+            <img src="images/jaipur-bazaar.jpg" alt="Vibrant Jaipur market with handicrafts"/>
+        </div>
+
+        <div class="shopping-items">
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">checkroom</span>
+                <p class="label-bold">Block-print Textiles</p>
+            </div>
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">vase</span>
+                <p class="label-bold">Blue Pottery</p>
+            </div>
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">steps</span>
+                <p class="label-bold">Mojari / Jutti</p>
+            </div>
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">diamond</span>
+                <p class="label-bold">Jewellery</p>
+            </div>
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">palette</span>
+                <p class="label-bold">Handicrafts</p>
+            </div>
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">spa</span>
+                <p class="label-bold">Rajasthani Décor</p>
+            </div>
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">local_florist</span>
+                <p class="label-bold">Spices</p>
+            </div>
+            <div class="shopping-item hard-shadow">
+                <span class="material-symbols-outlined">storefront</span>
+                <p class="label-bold">Souvenirs</p>
+            </div>
+        </div>
+
+        <div class="shopping-warning">
+            <div class="shopping-warning-header">
+                <span class="material-symbols-outlined">warning</span>
+                <h3 class="headline-md" style="font-size:18px;color:var(--error);">Important Shopping Rule</h3>
+            </div>
+            <p class="body-md" style="margin-bottom:12px;">Do not buy expensive jewellery, gemstones, or precious items simply because a seller says they are "government approved" or "export quality."</p>
+            <ol>
+                <li>Compare multiple shops</li>
+                <li>Ask for a detailed bill</li>
+                <li>Check certification</li>
+                <li>Avoid pressure sales</li>
+                <li>Do not assume a tourist-shop recommendation means the price is fair</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- GETTING AROUND -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">Getting Around Jaipur</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">Transport options for comfortable sightseeing.</p>
+            </div>
+        </div>
+
+        <div class="transport-grid">
+            <div class="transport-card hard-shadow" style="background:var(--marigold);">
+                <span class="material-symbols-outlined" style="color:var(--indigo-night);">local_taxi</span>
+                <h3 class="headline-md" style="font-size:20px;margin-bottom:8px;">Cab + Driver</h3>
+                <p class="body-md" style="color:var(--indigo-night);">Best for full sightseeing days. Recommended for Day 2, Day 3, and Day 5 day trips.</p>
+            </div>
+            <div class="transport-card hard-shadow" style="background:var(--turquoise);">
+                <span class="material-symbols-outlined" style="color:#fff;">electric_rickshaw</span>
+                <h3 class="headline-md" style="font-size:20px;margin-bottom:8px;color:#fff;">Auto / E-rickshaw</h3>
+                <p class="body-md" style="color:rgba(255,255,255,0.9);">Useful for short distances around the old city. Confirm fare before starting if not metered.</p>
+            </div>
+            <div class="transport-card hard-shadow" style="background:var(--sand-white);">
+                <span class="material-symbols-outlined" style="color:var(--rani-pink);">directions_walk</span>
+                <h3 class="headline-md" style="font-size:20px;margin-bottom:8px;">Walking</h3>
+                <p class="body-md" style="color:var(--on-surface-variant);">Best around Hawa Mahal, City Palace, Jantar Mantar, Johari & Bapu Bazaar. Don't try to walk between every attraction.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEXT PAGE CTA -->
+<section style="padding:48px 0;background:var(--surface-container-low);text-align:center;">
+    <div class="container" style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+        <a class="btn-secondary hard-shadow btn-click btn-lg" href="food.html">← Food Guide</a>
+        <a class="btn-primary hard-shadow btn-click btn-lg" href="budget.html">Budget & Tips →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div><div class="footer-brand">JAIPUR JIVE</div><p class="footer-copy">© 2024 Jaipur Jive. Explore the Pink City with Soul.</p></div>
+    <div class="footer-links">
+        <a class="footer-link highlight" href="index.html">Home</a>
+        <a class="footer-link" href="itinerary.html">Itinerary</a>
+        <a class="footer-link" href="food.html">Food Guide</a>
+        <a class="footer-link" href="shopping.html">Shopping</a>
+        <a class="footer-link" href="budget.html">Budget & Tips</a>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kunal31meena.github.io/jaipur-itinerary/sitemap.xml

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Food Guide — Jaipur Jive</title>
+    <meta name="description" content="Must-try Rajasthani dishes and eating strategy for your Jaipur trip. Dal Baati Churma, Gatte ki Sabzi, Pyaz Kachori and more."/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <style>
+        .food-grid { display: grid; grid-template-columns: 1fr; gap: var(--gutter); }
+        @media (min-width: 768px) { .food-grid { grid-template-columns: 1fr 1fr; } }
+
+        .food-card {
+            background: var(--sand-white); border: 2px solid var(--indigo-night);
+            border-radius: var(--rounded-xl); overflow: hidden;
+        }
+        .food-card-img { height: 280px; overflow: hidden; }
+        .food-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .food-card:hover .food-card-img img { transform: scale(1.05); }
+        .food-card-body { padding: 24px; }
+
+        .food-items { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .food-chip {
+            background: var(--rani-pink); color: #fff;
+            font-family: var(--font-label); font-size: 12px; font-weight: 700;
+            padding: 6px 12px; border-radius: var(--rounded-full);
+        }
+        .food-chip.turquoise { background: var(--turquoise); }
+        .food-chip.yellow { background: var(--marigold); color: var(--indigo-night); }
+
+        .food-strategy {
+            background: var(--indigo-night); color: var(--sand-white);
+            border: 2px solid var(--indigo-night); border-radius: var(--rounded-xl); padding: 32px;
+        }
+        .strategy-row {
+            display: flex; align-items: center; gap: 16px; padding: 16px 0;
+            border-bottom: 1px solid rgba(253,247,240,0.1);
+        }
+        .strategy-row:last-child { border-bottom: none; }
+        .strategy-meal {
+            font-family: var(--font-label); font-size: 14px; font-weight: 700;
+            color: var(--marigold); width: 100px; text-transform: uppercase;
+        }
+
+        /* Schedule table */
+        .schedule-table {
+            width: 100%; border-collapse: collapse;
+            border: 2px solid var(--indigo-night); border-radius: var(--rounded-xl);
+            overflow: hidden;
+        }
+        .schedule-table thead { background: var(--indigo-night); color: var(--marigold); }
+        .schedule-table th {
+            padding: 16px 24px; text-align: left;
+            font-family: var(--font-label); font-size: 14px; font-weight: 700;
+        }
+        .schedule-table td { padding: 14px 24px; font-size: 15px; }
+        .schedule-table tbody tr:nth-child(odd) { background: rgba(255,184,0,0.08); }
+        .schedule-table tbody tr:nth-child(even) { background: var(--sand-white); }
+        .schedule-table tbody tr { transition: background 0.2s; }
+        .schedule-table tbody tr:hover { background: rgba(255,184,0,0.15); }
+
+        .time-badge {
+            display: inline-flex; align-items: center; gap: 4px;
+            font-family: var(--font-label); font-size: 12px; font-weight: 700;
+            color: var(--turquoise); text-transform: uppercase;
+        }
+
+        .inner-nav-links { display: none; gap: 24px; align-items: center; }
+        @media (min-width: 768px) { .inner-nav-links { display: flex; } }
+    </style>
+</head>
+<body class="page-fade-in">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">JAIPUR JIVE</a>
+    <div class="inner-nav-links">
+        <a class="nav-link" href="itinerary.html">Itinerary</a>
+        <a class="nav-link active" href="food.html">Food Guide</a>
+        <a class="nav-link" href="shopping.html">Shopping</a>
+        <a class="nav-link" href="budget.html">Budget & Tips</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+        <a class="btn-primary hard-shadow btn-click nav-cta" href="index.html">
+            <span class="material-symbols-outlined" style="font-size:18px;margin-right:6px;">home</span> Home
+        </a>
+        <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('active')">
+            <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">
+        <span class="material-symbols-outlined" style="font-size:36px;">close</span>
+    </button>
+    <a class="mobile-nav-link" href="index.html">Home</a>
+    <a class="mobile-nav-link" href="itinerary.html">Itinerary</a>
+    <a class="mobile-nav-link" href="food.html">Food Guide</a>
+    <a class="mobile-nav-link" href="shopping.html">Shopping</a>
+    <a class="mobile-nav-link" href="budget.html">Budget & Tips</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <div class="bg-pattern"></div>
+    <div class="page-header-content">
+        <a class="page-back" href="index.html">
+            <span class="material-symbols-outlined">arrow_back</span> Back to Home
+        </a>
+        <h1 class="display-lg" style="color:var(--marigold);">Food Guide</h1>
+        <p class="body-lg" style="color:rgba(253,247,240,0.8);margin-top:12px;max-width:600px;">
+            Must-try Rajasthani dishes and a simple eating strategy for more variety without the expense.
+        </p>
+    </div>
+</div>
+
+<!-- MUST TRY + STRATEGY -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">Must-Try Rajasthani Food</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">The essential dishes you absolutely cannot miss in Jaipur.</p>
+            </div>
+        </div>
+
+        <div class="food-grid">
+            <div class="food-card hard-shadow">
+                <div class="food-card-img">
+                    <img src="images/rajasthani-food.jpg" alt="Traditional Rajasthani thali with dal baati churma"/>
+                </div>
+                <div class="food-card-body">
+                    <h3 class="headline-md" style="margin-bottom:8px;">Essential Dishes</h3>
+                    <p class="body-md" style="color:var(--on-surface-variant);">From hearty mains to iconic street food — your complete checklist.</p>
+                    <div class="food-items">
+                        <span class="food-chip">Dal Baati Churma</span>
+                        <span class="food-chip turquoise">Gatte ki Sabzi</span>
+                        <span class="food-chip yellow">Ker Sangri</span>
+                        <span class="food-chip">Bajra Roti</span>
+                        <span class="food-chip turquoise">Pyaz Kachori</span>
+                        <span class="food-chip yellow">Mawa Kachori</span>
+                        <span class="food-chip">Mirchi Bada</span>
+                        <span class="food-chip turquoise">Ghewar</span>
+                        <span class="food-chip yellow">Lassi</span>
+                        <span class="food-chip">Chaas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-strategy hard-shadow">
+                <h3 class="headline-md" style="color:var(--marigold);margin-bottom:8px;">
+                    <span class="material-symbols-outlined" style="vertical-align:middle;margin-right:8px;">restaurant</span>
+                    Simple Food Strategy
+                </h3>
+                <p class="body-md" style="color:rgba(253,247,240,0.8);margin-bottom:24px;">Instead of eating at famous restaurants every day, follow this pattern for more variety without making every meal expensive.</p>
+
+                <div class="strategy-row">
+                    <span class="strategy-meal">
+                        <span class="material-symbols-outlined" style="font-size:20px;vertical-align:middle;margin-right:4px;">wb_twilight</span>
+                        Breakfast
+                    </span>
+                    <span style="color:var(--sand-white);">Local breakfast — kachori, poha, chai, lassi</span>
+                </div>
+                <div class="strategy-row">
+                    <span class="strategy-meal">
+                        <span class="material-symbols-outlined" style="font-size:20px;vertical-align:middle;margin-right:4px;">light_mode</span>
+                        Lunch
+                    </span>
+                    <span style="color:var(--sand-white);">Rajasthani thali — dal baati churma, gatte</span>
+                </div>
+                <div class="strategy-row">
+                    <span class="strategy-meal">
+                        <span class="material-symbols-outlined" style="font-size:20px;vertical-align:middle;margin-right:4px;">wb_sunny</span>
+                        Evening
+                    </span>
+                    <span style="color:var(--sand-white);">Street food & snacks — kachori, mirchi bada</span>
+                </div>
+                <div class="strategy-row">
+                    <span class="strategy-meal">
+                        <span class="material-symbols-outlined" style="font-size:20px;vertical-align:middle;margin-right:4px;">nights_stay</span>
+                        Dinner
+                    </span>
+                    <span style="color:var(--sand-white);">Restaurant / rooftop — traditional thali</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- DAILY SCHEDULE -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">Approximate Daily Schedule</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">A typical day structure for your 5-day Jaipur trip.</p>
+            </div>
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="time-badge"><span class="material-symbols-outlined" style="font-size:16px;">wb_twilight</span> 7:30 – 8:30</span></td>
+                    <td>Breakfast</td>
+                </tr>
+                <tr>
+                    <td><span class="time-badge"><span class="material-symbols-outlined" style="font-size:16px;">light_mode</span> 9:00 – 12:30</span></td>
+                    <td>Main sightseeing</td>
+                </tr>
+                <tr>
+                    <td><span class="time-badge"><span class="material-symbols-outlined" style="font-size:16px;">restaurant</span> 12:30 – 2:00</span></td>
+                    <td>Lunch</td>
+                </tr>
+                <tr>
+                    <td><span class="time-badge"><span class="material-symbols-outlined" style="font-size:16px;">museum</span> 2:00 – 5:00</span></td>
+                    <td>Sightseeing / indoor attraction</td>
+                </tr>
+                <tr>
+                    <td><span class="time-badge"><span class="material-symbols-outlined" style="font-size:16px;">coffee</span> 5:00 – 7:00</span></td>
+                    <td>Rest / café / sunset</td>
+                </tr>
+                <tr>
+                    <td><span class="time-badge"><span class="material-symbols-outlined" style="font-size:16px;">nights_stay</span> 7:30 – 9:30</span></td>
+                    <td>Dinner + evening activity</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- NEXT PAGE CTA -->
+<section style="padding:48px 0;background:var(--surface-container-low);text-align:center;">
+    <div class="container" style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+        <a class="btn-secondary hard-shadow btn-click btn-lg" href="itinerary.html">← Itinerary</a>
+        <a class="btn-pink hard-shadow btn-click btn-lg" href="shopping.html">Shopping Guide →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div><div class="footer-brand">JAIPUR JIVE</div><p class="footer-copy">© 2024 Jaipur Jive. Explore the Pink City with Soul.</p></div>
+    <div class="footer-links">
+        <a class="footer-link highlight" href="index.html">Home</a>
+        <a class="footer-link" href="itinerary.html">Itinerary</a>
+        <a class="footer-link" href="food.html">Food Guide</a>
+        <a class="footer-link" href="shopping.html">Shopping</a>
+        <a class="footer-link" href="budget.html">Budget & Tips</a>
+    </div>
+</footer>
+
+</body>
+</html>

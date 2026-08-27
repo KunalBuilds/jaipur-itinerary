@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Jaipur Itinerary — Ultimate 5-Day Jaipur Travel Plan & Guide (Pink City)</title>
+    <meta name="description" content="The ultimate 5-day Jaipur itinerary and travel guide. Explore Hawa Mahal, Amer Fort, City Palace, local bazaars, authentic Rajasthani food, and budget breakdown."/>
+    <meta name="keywords" content="jaipur itinerary, jaipur itnary, 5 day jaipur itinerary, jaipur travel plan, jaipur trip planner, jaipur 5 days travel guide, pink city jaipur tour, places to visit in jaipur, jaipur sightseeing, jaipur tourism"/>
+    <meta name="author" content="Jaipur Jive"/>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Jaipur Itinerary — Ultimate 5-Day Jaipur Travel Plan (Pink City)"/>
+    <meta property="og:description" content="Explore Jaipur with a vibrant, curated 5-day itinerary. Discover royal forts, palaces, street food, bazaars & budget tips."/>
+    <meta property="og:image" content="images/hawa-mahal.jpg"/>
+    <meta property="og:site_name" content="Jaipur Jive"/>
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Jaipur Itinerary — Ultimate 5-Day Jaipur Travel Plan"/>
+    <meta name="twitter:description" content="Complete 5-day trip plan for Jaipur: Forts, Palaces, Shopping & Food Guide."/>
+    <meta name="twitter:image" content="images/hawa-mahal.jpg"/>
+
+    <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TouristTrip",
+          "name": "5-Day Jaipur Itinerary & Travel Plan",
+          "description": "Comprehensive 5-day itinerary covering royal palaces, hilltop forts, heritage bazaars, and traditional cuisine in Jaipur, Rajasthan.",
+          "touristType": "Sightseeing, Cultural, Heritage, Food",
+          "itinerary": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Day 1: Pink City & Royal Jaipur - Hawa Mahal, City Palace, Jantar Mantar"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Day 2: Amer Fort, Panna Meena Stepwell, Jaigarh Fort & Jal Mahal"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Day 3: Nahargarh Fort Sunset, Gaitore & Albert Hall Museum"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Day 4: Patrika Gate, Heritage Shopping & Rajasthani Food"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Day 5: Flexible Finale - Abhaneri Stepwell / Pushkar / City Exploration"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "TouristDestination",
+          "name": "Jaipur (The Pink City)",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jaipur",
+            "addressRegion": "Rajasthan",
+            "addressCountry": "India"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "26.9124",
+            "longitude": "75.7873"
+          }
+        }
+      ]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <style>
+        /* HOME PAGE — Full viewport, no scroll */
+        html, body { height: 100%; overflow: hidden; }
+
+        .home-wrapper {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar-home {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .hero-home {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 var(--margin-mobile);
+            position: relative;
+            overflow: hidden;
+        }
+        @media (min-width: 768px) { .hero-home { padding: 0 var(--margin-desktop); } }
+
+        .hero-grid {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--gutter);
+            align-items: center;
+            z-index: 10;
+            position: relative;
+            width: 100%;
+        }
+        @media (min-width: 768px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+
+        .hero-content { display: flex; flex-direction: column; gap: 24px; }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--turquoise); color: #fff;
+            font-family: var(--font-label); font-size: 14px; font-weight: 700;
+            padding: 6px 16px; border-radius: var(--rounded-full);
+            border: 2px solid var(--indigo-night);
+            text-transform: uppercase; letter-spacing: 0.1em; width: fit-content;
+        }
+
+        .hero-title .pink {
+            color: var(--rani-pink); position: relative; display: inline-block;
+        }
+        .hero-title .pink::after {
+            content: ''; position: absolute; bottom: -8px; left: 0;
+            width: 100%; height: 16px; background: var(--marigold);
+            z-index: -1; transform: rotate(-2deg);
+        }
+
+        .hero-buttons { display: flex; gap: 16px; padding-top: 16px; flex-wrap: wrap; }
+
+        .hero-image-wrapper { display: none; position: relative; }
+        @media (min-width: 768px) { .hero-image-wrapper { display: block; } }
+
+        .hero-image-container {
+            position: relative; width: 100%;
+            aspect-ratio: 4/5; max-width: 400px; margin: 0 auto;
+        }
+        .hero-image-bg {
+            position: absolute; inset: 0;
+            background: var(--marigold); border: 4px solid var(--indigo-night);
+            border-radius: 50% 50% 0 0;
+            transform: rotate(6deg) translate(16px, 16px);
+        }
+        .hero-image-fg {
+            position: absolute; inset: 0;
+            background: var(--rani-pink); border: 4px solid var(--indigo-night);
+            border-radius: 50% 50% 0 0; z-index: 10; overflow: hidden;
+        }
+        .hero-image-fg img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        .hero-image-fg:hover img { transform: scale(1.1); }
+
+        .hero-sun {
+            position: absolute; top: -32px; right: -32px;
+            background: var(--turquoise); border: 2px solid var(--indigo-night);
+            border-radius: 50%; padding: 16px; z-index: 20;
+            animation: spin 10s linear infinite;
+        }
+        .hero-sun .material-symbols-outlined { color: #fff; font-size: 36px; }
+
+        /* Bottom bar with quick stats */
+        .home-bottom-bar {
+            flex-shrink: 0;
+            background: var(--indigo-night);
+            border-top: 4px solid var(--marigold);
+            padding: 16px var(--margin-mobile);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        @media (min-width: 768px) {
+            .home-bottom-bar { padding: 16px var(--margin-desktop); gap: 32px; }
+        }
+
+        .bottom-stat {
+            display: flex; align-items: center; gap: 8px;
+            color: var(--sand-white); font-family: var(--font-label);
+            font-size: 13px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .bottom-stat .material-symbols-outlined { font-size: 20px; }
+
+        .bottom-divider {
+            width: 1px; height: 24px; background: rgba(253,247,240,0.2);
+            display: none;
+        }
+        @media (min-width: 768px) { .bottom-divider { display: block; } }
+
+        /* Entrance animations */
+        .hero-content > * {
+            opacity: 0; transform: translateY(24px);
+            animation: slideUp 0.6s ease-out forwards;
+        }
+        .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+        .hero-content > *:nth-child(2) { animation-delay: 0.25s; }
+        .hero-content > *:nth-child(3) { animation-delay: 0.4s; }
+        .hero-content > *:nth-child(4) { animation-delay: 0.55s; }
+
+        .hero-image-wrapper {
+            opacity: 0; transform: translateX(40px);
+            animation: slideLeft 0.8s ease-out 0.3s forwards;
+        }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideLeft {
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Nav links for quick page navigation */
+        .home-nav-pages {
+            display: none;
+            align-items: center;
+            gap: 8px;
+        }
+        @media (min-width: 768px) { .home-nav-pages { display: flex; } }
+
+        .home-nav-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: transparent; color: var(--indigo-night);
+            font-family: var(--font-label); font-size: 13px; font-weight: 700;
+            padding: 8px 16px; border: 2px solid transparent;
+            border-radius: var(--rounded-full);
+            transition: all 0.2s ease; cursor: pointer;
+        }
+        .home-nav-pill:hover {
+            border-color: var(--indigo-night);
+            background: var(--surface-container);
+        }
+        .home-nav-pill .material-symbols-outlined { font-size: 18px; }
+    </style>
+</head>
+<body>
+
+<div class="home-wrapper">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-home">
+        <a class="navbar-brand" href="index.html">JAIPUR JIVE</a>
+        <div class="home-nav-pages">
+            <a class="home-nav-pill" href="itinerary.html">
+                <span class="material-symbols-outlined" style="color:var(--rani-pink);">map</span> Itinerary
+            </a>
+            <a class="home-nav-pill" href="food.html">
+                <span class="material-symbols-outlined" style="color:var(--marigold);">restaurant</span> Food
+            </a>
+            <a class="home-nav-pill" href="shopping.html">
+                <span class="material-symbols-outlined" style="color:var(--turquoise);">shopping_bag</span> Shopping
+            </a>
+            <a class="home-nav-pill" href="budget.html">
+                <span class="material-symbols-outlined" style="color:var(--rani-pink);">payments</span> Budget & Tips
+            </a>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+            <a class="btn-primary hard-shadow btn-click nav-cta" href="itinerary.html">Plan My Trip</a>
+            <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('active')">
+                <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">
+            <span class="material-symbols-outlined" style="font-size:36px;">close</span>
+        </button>
+        <a class="mobile-nav-link" href="itinerary.html">Itinerary</a>
+        <a class="mobile-nav-link" href="food.html">Food Guide</a>
+        <a class="mobile-nav-link" href="shopping.html">Shopping</a>
+        <a class="mobile-nav-link" href="budget.html">Budget & Tips</a>
+    </div>
+
+    <!-- HERO — fills remaining viewport -->
+    <header class="hero-home hero-pattern">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge">5-Day Travel Plan</span>
+                <h1 class="display-lg hero-title" style="color:var(--indigo-night);">
+                    Explore the <br/>
+                    <span class="pink">Pink City</span> <br/>
+                    with Soul.
+                </h1>
+                <p class="body-lg" style="color:rgba(26,26,46,0.8);max-width:480px;">
+                    Experience a comfortable, balanced blend of sightseeing, food, and shopping perfectly suited for first-time visitors to Jaipur, Rajasthan.
+                </p>
+                <div class="hero-buttons">
+                    <a class="btn-primary hard-shadow btn-click btn-lg" href="itinerary.html">
+                        View Itinerary
+                    </a>
+                    <a class="btn-secondary hard-shadow btn-click btn-lg" href="food.html">
+                        Food Guide
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container">
+                    <div class="hero-image-bg"></div>
+                    <div class="hero-image-fg">
+                        <img src="images/hawa-mahal.jpg" alt="Hawa Mahal, Jaipur — the iconic Palace of Winds"/>
+                    </div>
+                    <div class="hero-sun">
+                        <span class="material-symbols-outlined">light_mode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bottom stat bar -->
+    <div class="home-bottom-bar">
+        <div class="bottom-stat">
+            <span class="material-symbols-outlined" style="color:var(--marigold);">calendar_month</span>
+            5 Days / 4 Nights
+        </div>
+        <div class="bottom-divider"></div>
+        <div class="bottom-stat">
+            <span class="material-symbols-outlined" style="color:var(--turquoise);">hiking</span>
+            Comfortable Pace
+        </div>
+        <div class="bottom-divider"></div>
+        <div class="bottom-stat">
+            <span class="material-symbols-outlined" style="color:var(--rani-pink);">sunny</span>
+            Best: Oct — Mar
+        </div>
+        <div class="bottom-divider"></div>
+        <div class="bottom-stat">
+            <span class="material-symbols-outlined" style="color:var(--marigold);">thermostat</span>
+            21 – 35°C
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

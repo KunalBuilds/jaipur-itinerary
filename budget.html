@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Budget & Tips — Jaipur Jive</title>
+    <meta name="description" content="Estimated budget for your Jaipur trip, practical travel tips, and packing list for the Pink City."/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <style>
+        /* Budget */
+        .budget-grid { display: grid; grid-template-columns: 1fr; gap: var(--gutter); }
+        @media (min-width: 768px) { .budget-grid { grid-template-columns: 1fr 1fr; } }
+
+        .budget-card {
+            border: 2px solid var(--indigo-night); border-radius: var(--rounded-xl); overflow: hidden;
+        }
+        .budget-header {
+            background: var(--indigo-night); color: var(--sand-white);
+            padding: 16px 24px; font-family: var(--font-headline); font-size: 20px; font-weight: 700;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .budget-table { width: 100%; border-collapse: collapse; }
+        .budget-table tr:nth-child(odd) { background: rgba(255,184,0,0.1); }
+        .budget-table tr:nth-child(even) { background: var(--sand-white); }
+        .budget-table td { padding: 12px 24px; font-size: 14px; }
+        .budget-table td:last-child { text-align: right; font-family: var(--font-label); font-weight: 700; }
+        .budget-table tr.total { background: var(--marigold) !important; font-weight: 700; }
+        .budget-table tr.total td { font-family: var(--font-label); font-weight: 700; font-size: 16px; }
+
+        /* Tips */
+        .tips-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 768px) { .tips-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .tips-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .tip-card {
+            background: var(--sand-white); border: 2px solid var(--indigo-night);
+            padding: 24px; display: flex; gap: 16px; align-items: flex-start;
+            transition: all 0.2s ease;
+        }
+        .tip-card:hover { transform: translateY(-4px); }
+        .tip-number {
+            font-family: var(--font-headline); font-size: 32px; font-weight: 800;
+            color: var(--marigold); flex-shrink: 0; line-height: 1;
+        }
+
+        /* Packing */
+        .packing-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media (min-width: 768px) { .packing-list { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 1024px) { .packing-list { grid-template-columns: repeat(4, 1fr); } }
+
+        .packing-item {
+            display: flex; align-items: center; gap: 8px;
+            padding: 12px 16px; background: var(--surface-container);
+            border: 1px solid var(--outline-variant); border-radius: var(--rounded);
+            transition: all 0.2s;
+        }
+        .packing-item:hover { background: var(--marigold); border-color: var(--indigo-night); }
+        .packing-item .material-symbols-outlined { color: var(--turquoise); font-size: 20px; }
+        .packing-item:hover .material-symbols-outlined { color: var(--indigo-night); }
+
+        .inner-nav-links { display: none; gap: 24px; align-items: center; }
+        @media (min-width: 768px) { .inner-nav-links { display: flex; } }
+    </style>
+</head>
+<body class="page-fade-in">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a class="navbar-brand" href="index.html">JAIPUR JIVE</a>
+    <div class="inner-nav-links">
+        <a class="nav-link" href="itinerary.html">Itinerary</a>
+        <a class="nav-link" href="food.html">Food Guide</a>
+        <a class="nav-link" href="shopping.html">Shopping</a>
+        <a class="nav-link active" href="budget.html">Budget & Tips</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+        <a class="btn-primary hard-shadow btn-click nav-cta" href="index.html">
+            <span class="material-symbols-outlined" style="font-size:18px;margin-right:6px;">home</span> Home
+        </a>
+        <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('active')">
+            <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">
+        <span class="material-symbols-outlined" style="font-size:36px;">close</span>
+    </button>
+    <a class="mobile-nav-link" href="index.html">Home</a>
+    <a class="mobile-nav-link" href="itinerary.html">Itinerary</a>
+    <a class="mobile-nav-link" href="food.html">Food Guide</a>
+    <a class="mobile-nav-link" href="shopping.html">Shopping</a>
+    <a class="mobile-nav-link" href="budget.html">Budget & Tips</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <div class="bg-pattern"></div>
+    <div class="page-header-content">
+        <a class="page-back" href="index.html">
+            <span class="material-symbols-outlined">arrow_back</span> Back to Home
+        </a>
+        <h1 class="display-lg" style="color:var(--marigold);">Budget & Tips</h1>
+        <p class="body-lg" style="color:rgba(253,247,240,0.8);margin-top:12px;max-width:600px;">
+            Estimated costs, practical advice, and what to pack for your Pink City adventure.
+        </p>
+    </div>
+</div>
+
+<!-- BUDGET SECTION -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">Estimated Budget</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">Planning ranges — not fixed prices. Actual cost depends on hotel category, transport, and shopping.</p>
+            </div>
+        </div>
+
+        <div class="budget-grid">
+            <div class="budget-card hard-shadow">
+                <div class="budget-header">
+                    <span>Budget Trip</span>
+                    <span class="label-sm" style="color:var(--marigold);">PER PERSON</span>
+                </div>
+                <table class="budget-table">
+                    <tr><td>Hotel, shared room</td><td>₹4,000–₹8,000</td></tr>
+                    <tr><td>Food (5 days)</td><td>₹2,500–₹5,000</td></tr>
+                    <tr><td>Local transport, shared</td><td>₹1,500–₹3,000</td></tr>
+                    <tr><td>Entry tickets</td><td>₹1,000–₹2,500</td></tr>
+                    <tr><td>Shopping</td><td>Optional</td></tr>
+                    <tr class="total"><td>Total (excl. travel to/from Jaipur)</td><td>₹9,000–₹18,500</td></tr>
+                </table>
+            </div>
+
+            <div class="budget-card hard-shadow-pink" style="border-color:var(--rani-pink);">
+                <div class="budget-header" style="background:var(--rani-pink);">
+                    <span>Comfortable Trip</span>
+                    <span class="label-sm" style="color:var(--sand-white);">PER PERSON</span>
+                </div>
+                <table class="budget-table">
+                    <tr><td>Hotel (private room)</td><td>₹8,000–₹15,000</td></tr>
+                    <tr><td>Food (5 days)</td><td>₹4,000–₹8,000</td></tr>
+                    <tr><td>Cab / local transport</td><td>₹4,000–₹8,000</td></tr>
+                    <tr><td>Entry tickets</td><td>₹1,500–₹3,000</td></tr>
+                    <tr class="total" style="background:var(--rani-pink)!important;color:#fff;"><td>Total (excl. travel to/from Jaipur)</td><td>₹17,500–₹34,000</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PRACTICAL TIPS -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">Practical Tips</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">Important things to know before you go.</p>
+            </div>
+        </div>
+
+        <div class="tips-grid">
+            <div class="tip-card hard-shadow">
+                <div class="tip-number">01</div>
+                <div>
+                    <h3 class="headline-md" style="font-size:18px;margin-bottom:4px;">Start Early</h3>
+                    <p class="body-md" style="color:var(--on-surface-variant);font-size:14px;">For forts, early morning is much better than midday. Heat and crowds increase significantly.</p>
+                </div>
+            </div>
+            <div class="tip-card hard-shadow">
+                <div class="tip-number">02</div>
+                <div>
+                    <h3 class="headline-md" style="font-size:18px;margin-bottom:4px;">Don't Overpack Days</h3>
+                    <p class="body-md" style="color:var(--on-surface-variant);font-size:14px;">Don't try to visit all monuments in one or two days. You'll spend too much time in traffic.</p>
+                </div>
+            </div>
+            <div class="tip-card hard-shadow">
+                <div class="tip-number">03</div>
+                <div>
+                    <h3 class="headline-md" style="font-size:18px;margin-bottom:4px;">Stay Flexible</h3>
+                    <p class="body-md" style="color:var(--on-surface-variant);font-size:14px;">Rain, traffic and fatigue can easily change your schedule. Keep one flexible block every day.</p>
+                </div>
+            </div>
+            <div class="tip-card hard-shadow">
+                <div class="tip-number">04</div>
+                <div>
+                    <h3 class="headline-md" style="font-size:18px;margin-bottom:4px;">Carry Water</h3>
+                    <p class="body-md" style="color:var(--on-surface-variant);font-size:14px;">Especially on fort days. Carry 1–2 litres and refill whenever possible. Stay hydrated.</p>
+                </div>
+            </div>
+            <div class="tip-card hard-shadow">
+                <div class="tip-number">05</div>
+                <div>
+                    <h3 class="headline-md" style="font-size:18px;margin-bottom:4px;">Check Timings</h3>
+                    <p class="body-md" style="color:var(--on-surface-variant);font-size:14px;">Official timings can change because of festivals, maintenance, weather or special events.</p>
+                </div>
+            </div>
+            <div class="tip-card hard-shadow">
+                <div class="tip-number">06</div>
+                <div>
+                    <h3 class="headline-md" style="font-size:18px;margin-bottom:4px;">Extra Departure Time</h3>
+                    <p class="body-md" style="color:var(--on-surface-variant);font-size:14px;">Jaipur traffic can make short journeys considerably longer. Add 30–60 min buffer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PACKING LIST -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="headline-lg">What to Pack</h2>
+                <p class="body-md" style="color:rgba(26,26,46,0.7);margin-top:8px;">Essentials for your Jaipur trip.</p>
+            </div>
+        </div>
+
+        <div class="packing-list">
+            <div class="packing-item"><span class="material-symbols-outlined">steps</span><span>Walking shoes</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">dry_cleaning</span><span>Lightweight clothes</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">umbrella</span><span>Umbrella (Jul-Sep)</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">wb_sunny</span><span>Sunscreen</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">visibility</span><span>Sunglasses</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">water_drop</span><span>Water bottle</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">battery_charging_full</span><span>Power bank</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">backpack</span><span>Small backpack</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">payments</span><span>Some cash</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">badge</span><span>Government ID</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">medication</span><span>Medicines</span></div>
+            <div class="packing-item"><span class="material-symbols-outlined">mosque</span><span>Temple clothing</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- BACK TO START CTA -->
+<section style="padding:48px 0;background:var(--surface-container-low);text-align:center;">
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+        <p class="headline-md" style="margin-bottom:8px;">Ready to explore the Pink City?</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+            <a class="btn-secondary hard-shadow btn-click btn-lg" href="shopping.html">← Shopping</a>
+            <a class="btn-primary hard-shadow btn-click btn-lg" href="itinerary.html">View Full Itinerary →</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div><div class="footer-brand">JAIPUR JIVE</div><p class="footer-copy">© 2024 Jaipur Jive. Explore the Pink City with Soul.</p></div>
+    <div class="footer-links">
+        <a class="footer-link highlight" href="index.html">Home</a>
+        <a class="footer-link" href="itinerary.html">Itinerary</a>
+        <a class="footer-link" href="food.html">Food Guide</a>
+        <a class="footer-link" href="shopping.html">Shopping</a>
+        <a class="footer-link" href="budget.html">Budget & Tips</a>
+    </div>
+</footer>
+
+</body>
+</html>
